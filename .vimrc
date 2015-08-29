@@ -1,6 +1,26 @@
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+filetype off
+
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+" Add plugins
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'christoomey/vim-tmux-navigator'
+
+" All of your Plugins must be added before the following line
+call vundle#end()
+
+" Enable filetype detection, filetype plugins and indent scripts.
+filetype plugin indent on
 
 " Update .vimrc immediately after it is modified.
 autocmd! bufwritepost .vimrc source %
@@ -31,10 +51,12 @@ set softtabstop=4
 set tabstop=4
 
 " Visual settings
+highlight LineNr ctermfg=253 ctermbg=234
 set cursorline
+set nowrap
 set number
 set ruler
-set nowrap
+set t_Co=256
 syntax on
 
 " Miscellaneous settings
@@ -43,12 +65,13 @@ set showcmd
 set showmatch
 set undolevels=700
 
-" Enable filetype detection, filetype plugins and indent scripts.
-filetype plugin indent on
-
-" Enable all Python syntax highlighting features.
-let python_highlight_all=1
-
 " Reselect visual block after indent/outdent 
 vnoremap < <gv
 vnoremap > >gv
+
+" Airline configuration
+set laststatus=2
+set timeoutlen=50
+
+" Enable all Python syntax highlighting features.
+let python_highlight_all=1
