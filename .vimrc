@@ -15,6 +15,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'scrooloose/syntastic'
+Plugin 'luochen1990/rainbow'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -69,9 +71,23 @@ set undolevels=700
 vnoremap < <gv
 vnoremap > >gv
 
+" Enable all Python syntax highlighting features.
+let python_highlight_all=1
+
 " Airline configuration
 set laststatus=2
 set timeoutlen=50
 
-" Enable all Python syntax highlighting features.
-let python_highlight_all=1
+" Rainbow Parentheses configuration
+let g:rainbow_active = 0
+
+" Syntastic configuration
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ["python", "pep8", "pyflakes", "flake8"]
