@@ -17,8 +17,6 @@ Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/syntastic'
 Plugin 'luochen1990/rainbow'
-" Plugin 'valloric/youcompleteme'
-" Plugin 'joonty/vdebug'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
