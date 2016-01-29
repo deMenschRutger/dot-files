@@ -1,3 +1,4 @@
+alias composer='/usr/local/bin/composer.phar'
 alias ll='ls -l'
 alias lla='ls -la'
 alias la='ls -A'
