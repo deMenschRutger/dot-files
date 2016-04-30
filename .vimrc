@@ -111,7 +111,3 @@ let g:rainbow_active=0
 
 " vim-javascript configuration
 let g:javascript_enable_domhtmlcss=1
-
-" Clean up JavaScript files automatically on save.
-autocmd bufwritepost *.js silent !standard-format -w %
-set autoread
