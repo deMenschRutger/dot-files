@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'glench/vim-jinja2-syntax'
 Plugin 'kien/ctrlp.vim'
 Plugin 'luochen1990/rainbow'
 Plugin 'ntpeters/vim-better-whitespace'
@@ -23,6 +24,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'stanangeloff/php.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'yggdroot/indentline'
+Plugin 'vim-scripts/sqlutilities'
+Plugin 'vim-scripts/align'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
