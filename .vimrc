@@ -14,18 +14,13 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'glench/vim-jinja2-syntax'
 Plugin 'kien/ctrlp.vim'
-Plugin 'luochen1990/rainbow'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'pangloss/vim-javascript'
-Plugin 'klen/python-mode'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'stanangeloff/php.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'yggdroot/indentline'
-Plugin 'vim-scripts/sqlutilities'
 Plugin 'vim-scripts/align'
 
 " All of your Plugins must be added before the following line
@@ -75,7 +70,13 @@ set t_Co=256
 colorscheme desert
 syntax on
 
+" Folding behaviour
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+
 " Miscellaneous settings
+set encoding=utf-8
 set history=700
 set showcmd
 set showmatch
@@ -89,8 +90,8 @@ vnoremap > >gv
 let python_highlight_all=1
 
 " Enable pymode
-let g:pymode=1
-let g:pymode_indent=1
+" let g:pymode=1
+" let g:pymode_indent=1
 
 " Airline configuration
 set laststatus=2
@@ -100,6 +101,7 @@ set timeoutlen=50
 nmap <silent> <C-N> :NERDTreeToggle<CR>
 let NERDTreeMapOpenSplit='h'
 let g:NERDTreeWinSize=40
+let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " Syntastic configuration
 set statusline+=%#warningmsg#
@@ -113,9 +115,3 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['python', 'pep8', 'flake8']
 let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_javascript_checkers = ['standard']
-
-" Rainbow Parentheses configuration
-let g:rainbow_active=0
-
-" vim-javascript configuration
-let g:javascript_enable_domhtmlcss=1
