@@ -19,6 +19,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'stanangeloff/php.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'yggdroot/indentline'
@@ -32,6 +33,11 @@ filetype plugin indent on
 
 " Update .vimrc immediately after it is modified.
 autocmd! bufwritepost .vimrc source %
+
+" Remap <leader>
+let mapleader=","
+set notimeout
+set nottimeout
 
 " Remap h to insert and use ijkl for inverse T cursor movement:
 map i <Up>
@@ -73,7 +79,6 @@ syntax on
 
 " Folding behaviour
 set foldmethod=indent
-set foldlevel=99
 nnoremap <space> za
 
 " Miscellaneous settings
@@ -116,3 +121,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['python', 'pep8', 'flake8']
 let g:syntastic_php_checkers = ['php', 'phpcs']
 let g:syntastic_javascript_checkers = ['standard']
+
+" NERD Commenter configuration
+nnoremap ,c :call NERDComment(0,"toggle")<C-m>
+vnoremap ,c :call NERDComment(0,"toggle")<C-m>
