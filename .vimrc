@@ -40,10 +40,10 @@ set notimeout
 set nottimeout
 
 " Remap h to insert and use ijkl for inverse T cursor movement:
-map i <Up>
-map j <Left>
-map k <Down>
-noremap h i
+"map i <Up>
+"map j <Left>
+"map k <Down>
+"noremap h i
 
 " Disable generating several additional files that Vim generates automatically.
 set nobackup
