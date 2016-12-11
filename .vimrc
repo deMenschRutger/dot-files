@@ -20,8 +20,6 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'stanangeloff/php.vim'
-Plugin 'tpope/vim-fugitive'
 Plugin 'yggdroot/indentline'
 Plugin 'vim-scripts/align'
 
@@ -38,12 +36,6 @@ autocmd! bufwritepost .vimrc source %
 let mapleader=","
 set notimeout
 set nottimeout
-
-" Remap h to insert and use ijkl for inverse T cursor movement:
-"map i <Up>
-"map j <Left>
-"map k <Down>
-"noremap h i
 
 " Disable generating several additional files that Vim generates automatically.
 set nobackup
@@ -65,7 +57,6 @@ set softtabstop=4
 set tabstop=4
 set listchars=tab:▸▸
 set list
-autocmd FileType javascript setl sw=2 sts=2 et
 
 " Visual settings
 highlight LineNr ctermfg=253 ctermbg=234
@@ -95,10 +86,6 @@ vnoremap > >gv
 " Enable all Python syntax highlighting features.
 let python_highlight_all=1
 
-" Enable pymode
-" let g:pymode=1
-" let g:pymode_indent=1
-
 " Airline configuration
 set laststatus=2
 set timeoutlen=50
@@ -119,8 +106,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['python', 'pep8', 'flake8']
-let g:syntastic_php_checkers = ['php', 'phpcs']
-let g:syntastic_javascript_checkers = ['standard']
 
 " NERD Commenter configuration
 nnoremap ,c :call NERDComment(0,"toggle")<C-m>
