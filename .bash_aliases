@@ -10,3 +10,6 @@ force_color_prompt=yes
 if [ -f ~/.bash_startup ]; then
     . ~/.bash_startup
 fi
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
