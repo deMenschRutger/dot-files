@@ -14,14 +14,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'mitsuhiko/vim-jinja'
-Plugin 'kien/ctrlp.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'yggdroot/indentline'
-Plugin 'vim-scripts/align'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -106,7 +102,3 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['python', 'pep8', 'flake8']
-
-" NERD Commenter configuration
-nnoremap ,c :call NERDComment(0,"toggle")<C-m>
-vnoremap ,c :call NERDComment(0,"toggle")<C-m>
