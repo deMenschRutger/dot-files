@@ -12,7 +12,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Add plugins
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/nerdtree'
@@ -82,10 +81,6 @@ vnoremap > >gv
 " Enable all Python syntax highlighting features.
 let python_highlight_all=1
 
-" Airline configuration
-set laststatus=2
-set timeoutlen=50
-
 " NERDTree configuration
 nmap <silent> <C-N> :NERDTreeToggle<CR>
 let NERDTreeMapOpenSplit='h'
@@ -102,3 +97,12 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['python', 'pep8', 'flake8']
+
+" Powerline configuration
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
+" Always show statusline
+set laststatus=2
+set t_Co=256
