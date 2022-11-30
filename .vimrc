@@ -11,10 +11,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Add plugins
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'yggdroot/indentline'
 
@@ -81,12 +78,6 @@ vnoremap > >gv
 " Enable all Python syntax highlighting features.
 let python_highlight_all=1
 
-" NERDTree configuration
-nmap <silent> <C-N> :NERDTreeToggle<CR>
-let NERDTreeMapOpenSplit='h'
-let g:NERDTreeWinSize=40
-let NERDTreeIgnore=['\.pyc$', '\~$']
-
 " Syntastic configuration
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -97,12 +88,3 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['python', 'pep8', 'flake8']
-
-" Powerline configuration
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-
-" Always show statusline
-set laststatus=2
-set t_Co=256
